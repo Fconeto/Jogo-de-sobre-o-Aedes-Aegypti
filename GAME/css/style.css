@@ -10,6 +10,13 @@ body {
     background: linear-gradient(#41e731 10%, #2da822 40%);
 }
 
+.morador {
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    background-color: red;
+}
+
 .bairro  {
     position:absolute;
     width: 100%;
@@ -20,12 +27,13 @@ body {
 
 .b1 {
     position: relative;
+    transform: rotate(180deg);
     width: 100%;
     height: 50%;
     box-shadow:
-    inset 0 -1.5px #838383,
-    inset 0 -5px #e1f100,
-    inset 0 -40px #838383;
+    inset 0 1.5px #838383,
+    inset 0 5px #e1f100,
+    inset 0 40px #838383;
     
     /* box-shadow: ; */
 
@@ -43,84 +51,319 @@ body {
 }
 
 .casa {
-    position: relative;
+    position: static;
     margin-top: 40vh;
     box-shadow: 0px -50px 1px -10px rgb(175, 93, 17);
     transform: translateY(-100%);
     width: 300px;
     height: 150px;
-    background-color: #ffffff;
+    background-color: #663106;
     border: solid 5px #000000;
 }
 
+.cerca {
+    position: relative;
+    height: 80%;
+    width: 4px;
+    top: 15%;
+    background: linear-gradient(to bottom,#a35003, #a35003 14%, #000000 10%, #000000 15%,
+    #a35003 15%, #a35003 29%, #000000 25%, #000000 30%,
+    #a35003 30%, #a35003 44%, #000000 40%, #000000 45%,
+    #a35003 45%, #a35003 59%, #000000 55%, #000000 60%,
+    #a35003 60%, #a35003 74%, #000000 70%, #000000 75%,
+    #a35003 75%, #a35003 89%, #000000 85%, #000000 90%,
+    #a35003 90%);
+}
+
 .quarto {
-    position: relative;
-    width: 150px;
-    height: 80px;
-    box-shadow: 
-    inset -5px 0px black,
-    inset 0 -5px black;
+    position: static;
+    width: 50%;
+    height: 60%;
+    border-bottom: solid 5px #000000;
+    border-right: solid 5px #000000;
 }
 
-.cozinha {
-    position: relative;
-    width: 150px;
-    height: 60px;
+.cama {
+    position: absolute;
+    width: 60px;
+    height: 30px;
+    border-radius: 0 5px 5px 0;
+    box-shadow: inset 0 -2px 4px 0 #252525,
+    inset 4px 0 1px 0 #a35003,
+    inset 20px 0 0 -3px #7c7c7c;
+    background: #d4d4d4;
 }
 
+.mesa {
+    position: absolute;
+    top: 35px;
+    width: 20px;
+    height: 35px;
+    background: #a35003;
+    box-shadow: inset 0 -2px 4px 0 #252525;
+}
+
+.cadeira {
+    position: absolute;
+    top: calc(35px + 12px);
+    left: 22px;
+    width: 15px;
+    height: 15px;
+    background: #a35003;
+    box-shadow: inset 0 -2px 4px 0 #252525;
+}
+
+.computador {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 20%;
+    width: 3px;
+    height: 25px;
+    border-radius: 5px;
+    background: #000000;
+}
+
+.balcao {
+    position: absolute;
+    left: 50%;
+    top: 75%;
+    transform: translateX(-100%);
+    height: 25%;
+    width: 20px;
+    background: #000000;
+    box-shadow: inset 0 -2px 4px 0 #252525;
+}
+
+.sofa {
+    position: absolute;
+    left: 70%;
+    top: 20%;
+    width: 30px;
+    height: 50px;
+    border-radius: 5px;
+    background: #ffffff;
+    box-shadow: inset 0 -2px 4px 0 #252525,
+    inset 8px 0 4px 0 #ffffff,
+    inset 0 6px 3px 0 #ffffff,
+    inset 0 6px 3px 0 #252525,
+    inset 0 -6px 3px 0 #ffffff,
+    inset 0 -6px 3px 0 #252525,
+    inset 10px 0 4px 0 #252525
+    ;
+}
+
+.mesa_jantar {
+    position: absolute;
+    left: 70%;
+    top: 70%;
+    width: 30px;
+    height: 40px;
+    background: #a35003;
+    box-shadow: inset 0 -2px 4px 0 #252525;
+}
+
+.lado_esquerdo {
+    position: absolute;
+    top: 10%;
+    left: -60%;
+}
+
+.lado_direito {
+    position: absolute;
+    top: 10%;
+    left: 110%;
+}
+
+.cadeira_jantar {
+    position: relative;
+    top: 0;
+    left: 0;
+    margin-top: 10%;
+}
+
+.fogao {
+    position: absolute;
+    top: 60%;
+    height: 20px;
+    width: 20px;
+    background: #ffffff;
+    box-shadow: inset 0 -2px 4px 0 #252525;
+}
+
+.boca {
+    position: absolute;
+    left: 20%;
+    top: 10%;
+    height: 5px;
+    width: 5px;
+    border-radius: 100%;
+    background: #302e2e;
+    box-shadow: 8px 0 0 0 #302e2e,
+    0 8px 0 0 #302e2e,
+    8px 8px 0 0 #302e2e;
+}
+
+.pia {
+    position: absolute;
+    left: 30%;
+    top: 85%;
+    width: 30px;
+    height: 15%;
+    box-shadow: inset 0 -2px 4px 0 #252525,
+    inset 0 0 1px 2px #7c7c7c,
+    inset 0 0 2px 2px #302e2e,
+    inset 0 0 2px 20px #7c7c7c,
+    10px 0 #7c7c7c,
+    -10px 0 #7c7c7c,
+    -40px 0 #c7c7c7;
+}
+
+.espaco {
+    position: absolute;
+    height: 25px;
+    width: 5px;
+    background-color: #663106;
+}
 
 .e1 {
-    position: relative;
-    left: 100%;
+    left: 50%;
     transform: translateX(-100%);
-    width: 5px;
-    height: 25px;
-    background-color: #ffffff;
 }
 
 .e2 {
-    position: absolute;
-    top: 0;
-    left: 80%;
-    width: 5.5px;
-    height: 30px;
-    background-color: #ffffff;
-    transform: translateY(-60%) rotate(0.25turn);
+    top: 100%;
+    transform: translateX(-100%) rotate(-90deg);
+    transform-origin: right top 0;
 }
 
-.e3 {
+.porta {
     position: absolute;
-    left: 20%;
-    width: 5.5px;
-    height: 30px;
-    background-color: #ffffff;
-    transform: translateY(-42%) rotate(0.25turn);
+    height: 25px;
+    width: 5px;
+    background-color: #a35003;
 }
 
 .p1 {
-    position: relative;
-    left: 100%;
+    left: 50%;
     transform: translateX(-100%);
-    width: 5px;
-    height: 25px;
-    background-color: #8a2f04;
+    transform-origin: left bottom 0;
 }
 
 .p2 {
-    position: absolute;
-    top: 0;
-    left: 80%;
-    width: 5.5px;
-    height: 30px;
-    background-color: #8a2f04;
-    transform: translateY(-60%) rotate(0.25turn);
+    top: 100%;
+    transform: translateX(-100%) rotate(-90deg);
+    transform-origin: right top 0;
 }
 
-.p3 {
+.a1 {
+    transform: translateX(-100%) rotate(90deg);
+}
+
+.a2 {
+    transform: translateX(0);
+}
+
+.vaso {
     position: absolute;
+    width: 40px;
+    top: -35%;
+}
+
+.vaso_limpo {
+    box-shadow: inset 0 0 1px 2px #472000;
+}
+
+.pneu {
+    position: absolute;
+    width: 25px;
+    height: 25px;
+    left: 90%;
+    top: 120%;
+    transform: translate(50%);
+    border-radius: 50%;
+    box-shadow: inset 0 0 0 4px #04bedf;
+    border: solid 2px #000000;
+}
+
+.pneu_vazio {
+    box-shadow: inset 0 0 0 2px #000000,
+    inset 0 0px 0 4px #000000;
+}
+
+.piscina {
+    position: absolute;
+    width: 120px;
+    height: 45px;
     left: 20%;
-    width: 5.5px;
-    height: 30px;
-    background-color: #8a2f04;
-    transform: translateY(-42%) rotate(0.25turn);
+    top: 110%;
+    background: #04bedf;
+    border-radius: 10px;
+    box-shadow: inset 0 0 0 3px #047cdf;
+    border: solid 2px #000000;
+}
+
+.piscina_vazia {
+    background: #047cdf;
+    box-shadow: inset 0 0 0 3px #047cdf,
+    inset 0 0 10px #000000;
+}
+
+.caixa {
+    position: absolute;
+    width: 45px;
+    height: 45px;
+    left: 70%;
+    top: 110%;
+    background: #04bedf;
+    border-radius: 100%;
+    box-shadow: inset 0 0 0 3px #022b4d;
+    border: solid 2px #000000;
+}
+
+.caixa_tampada {
+    background: #000000;
+    width: 45px;
+    height: 45px;
+    box-shadow: inset 5px 10px 2px 15px #022b4d;
+}
+
+.garrafa {
+    position: absolute;
+    width: 8px;
+    height: 20px;
+    left: 10%;
+    top: 120%;
+    background: #047cdf;
+    border-radius: 2px;
+    box-shadow: 0 -4px 0 -2px #022b4d,
+    0 -4.5px 0 -1.5px #000000;
+    border: solid 1px #000000;
+}
+
+.garrafa_vazia {
+    background: #047ddf5b;
+    transform: rotate(180deg);
+}
+
+.vaso2 {
+    position: absolute;
+    width: 60px;
+    left: 30%;
+    top: -20%;
+
+}
+
+.vaso2_limpo {
+    box-shadow: inset 0 0 1px 2px #472000;
+}
+
+.arbusto {
+    position: relative;
+    width: 8px;
+    height: 12px;
+    background: #155310;
+    box-shadow: -5px 0 0 -2px #155310,
+    5px 0 0 -1px #155310;
+
 }
