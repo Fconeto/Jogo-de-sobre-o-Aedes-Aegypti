@@ -8,13 +8,21 @@ body {
     height: 100vh;
     width: 100vw;
     background: linear-gradient(#41e731 10%, #2da822 40%);
+    overflow: hidden;
 }
 
 .morador {
     position: absolute;
-    width: 10px;
-    height: 10px;
-    background-color: red;
+    left: 50%;
+    top: 10%;
+    width: 60px;
+}
+
+.carro_amarelo {
+    position: absolute;
+    width: 100px;
+    transform: translateY(-90%);
+    left: -22%;
 }
 
 .bairro  {
@@ -34,9 +42,6 @@ body {
     inset 0 1.5px #838383,
     inset 0 5px #e1f100,
     inset 0 40px #838383;
-    
-    /* box-shadow: ; */
-
 }
 
 
@@ -60,19 +65,33 @@ body {
     background-color: #663106;
     border: solid 5px #000000;
 }
-
 .cerca {
+    position: absolute;
+    height: 75px;
+    width: 75px;
+}
+
+.c1 {
+    left: 22.3%;
+    top: 20%;
+}
+
+.c2 {
+    top: 20%;
+}
+
+.c3 {
+    left: 72.3%;
+    top: 20%;
+
+}
+
+.arbusto {
     position: relative;
-    height: 80%;
-    width: 4px;
-    top: 15%;
-    background: linear-gradient(to bottom,#a35003, #a35003 14%, #000000 10%, #000000 15%,
-    #a35003 15%, #a35003 29%, #000000 25%, #000000 30%,
-    #a35003 30%, #a35003 44%, #000000 40%, #000000 45%,
-    #a35003 45%, #a35003 59%, #000000 55%, #000000 60%,
-    #a35003 60%, #a35003 74%, #000000 70%, #000000 75%,
-    #a35003 75%, #a35003 89%, #000000 85%, #000000 90%,
-    #a35003 90%);
+    margin-top: -20px;
+    height: 100%;
+    transform: rotate(90deg);
+    object-position: 5px 0;
 }
 
 .quarto {
@@ -124,6 +143,10 @@ body {
     background: #000000;
 }
 
+.mosquito {
+    position: absolute;
+}
+
 .balcao {
     position: absolute;
     left: 50%;
@@ -157,10 +180,32 @@ body {
     position: absolute;
     left: 70%;
     top: 70%;
+}
+
+.mesa_maior {
     width: 30px;
     height: 40px;
     background: #a35003;
     box-shadow: inset 0 -2px 4px 0 #252525;
+}
+
+.mesa_jardim {
+    position: absolute;
+    left: 10%;
+    top: 115%;
+}
+
+.mesa_j {
+    width: 35px;
+    height: 45px;
+    background: #fff784;
+    box-shadow: inset 0 -2px 4px 0 #252525,
+    inset 10px 0 1px 0 #fff784,
+    inset 11px 0 3px 0 #000000,
+    inset 20px 0 1px 0 #fff784,
+    inset 21px 0 3px 0 #000000,
+    inset 30px 0 1px 0 #fff784,
+    inset 31px 0 2px 0 #000000;
 }
 
 .lado_esquerdo {
@@ -224,6 +269,7 @@ body {
     height: 25px;
     width: 5px;
     background-color: #663106;
+
 }
 
 .e1 {
@@ -234,6 +280,12 @@ body {
 .e2 {
     top: 100%;
     transform: translateX(-100%) rotate(-90deg);
+    transform-origin: right top 0;
+}
+
+.e3 {
+    left: 80%;
+    transform: translateY(-20%) rotate(-90deg);
     transform-origin: right top 0;
 }
 
@@ -256,6 +308,12 @@ body {
     transform-origin: right top 0;
 }
 
+.p3 {
+    left: 80%;
+    transform: translateY(-20%) rotate(-90deg);
+    transform-origin: right top 0;
+}
+
 .a1 {
     transform: translateX(-100%) rotate(90deg);
 }
@@ -264,38 +322,55 @@ body {
     transform: translateX(0);
 }
 
-.vaso {
+.a3 {
+    transform: translateY(-20%);
+}
+
+.planta_varanda {
     position: absolute;
-    width: 40px;
     top: -35%;
 }
 
-.vaso_limpo {
-    box-shadow: inset 0 0 1px 2px #472000;
+.vaso {
+    position:relative;
+    float: left;
+    width: 40px;
+}
+
+.planta_porta {
+    position: absolute;
+    display: flex;
+    left: 72%;
+    transform: translateY(-100%);
+}
+
+.vaso2 {
+    position: relative;
+    float: left;
+    width: 35px;
+    margin-right: 10px;
+}
+
+.vaso3 {
+    position: absolute;
+    transform: translateX(-100%);
+    width: 40px;
+    left: 100%;
+    object-position: 5px -5px;
 }
 
 .pneu {
     position: absolute;
-    width: 25px;
-    height: 25px;
+    width: 45px;
     left: 90%;
-    top: 120%;
-    transform: translate(50%);
-    border-radius: 50%;
-    box-shadow: inset 0 0 0 4px #04bedf;
-    border: solid 2px #000000;
-}
-
-.pneu_vazio {
-    box-shadow: inset 0 0 0 2px #000000,
-    inset 0 0px 0 4px #000000;
+    top: 110%;
 }
 
 .piscina {
     position: absolute;
     width: 120px;
     height: 45px;
-    left: 20%;
+    left: 25%;
     top: 110%;
     background: #04bedf;
     border-radius: 10px;
@@ -330,40 +405,12 @@ body {
 
 .garrafa {
     position: absolute;
-    width: 8px;
-    height: 20px;
-    left: 10%;
+    z-index: 10;
+    width: 38px;
     top: 120%;
-    background: #047cdf;
-    border-radius: 2px;
-    box-shadow: 0 -4px 0 -2px #022b4d,
-    0 -4.5px 0 -1.5px #000000;
-    border: solid 1px #000000;
+    left: 5%;
 }
 
-.garrafa_vazia {
-    background: #047ddf5b;
-    transform: rotate(180deg);
-}
-
-.vaso2 {
-    position: absolute;
-    width: 60px;
-    left: 30%;
-    top: -20%;
-
-}
-
-.vaso2_limpo {
-    box-shadow: inset 0 0 1px 2px #472000;
-}
-
-.arbusto {
-    position: relative;
-    width: 8px;
-    height: 12px;
-    background: #155310;
-    box-shadow: -5px 0 0 -2px #155310,
-    5px 0 0 -1px #155310;
-
+.off {
+    display: none;
 }
